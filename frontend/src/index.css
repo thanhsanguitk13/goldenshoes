@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", ;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.formatCartMoney{
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  margin-top: 1rem; /* Equivalent to 4 in the default font size */
+
+}
+.bgimagecart{
+  width: 100px;
+  height: 100px;
+  margin-right: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+}
+body{
+  font-family: Rubik,sans-serif;
+}
+
+.trash{
+  width: 2rem; /* Equivalent to 7 in the default font size */
+  height: 2rem; /* Equivalent to 7 in the default font size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6c90e;
+  border-radius: 50%;
+}
+
+.mibo{
+  display: flex;
+  align-items: center;
+  width: 2rem; 
+  height: 2rem; 
+  justify-content: center;
+  font-weight: bold; 
+  border-radius: 50%;
+  background-color: #f6c90e; 
+  
+}
+
+
+.mainContent {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+
+.mainContent::before {
+  content: "";
+  display: block;
+  position: fixed;
+  width: 300%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  transform: translateX(-50%) skewY(-8deg);
+  background-color: #f6c90e;
+  z-index: -1;
+  -webkit-animation: wave 8s ease-in-out infinite alternate;
+  animation: wave 8s ease-in-out infinite alternate;
+}
+.products{
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  margin-top: 1rem; 
+}
+.nike{
+  width: 50px;
+  margin-top: 0.75rem; /* Equivalent to 3 in the default font size */
+  z-index: 10;
+  position: relative;
+
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-50%) skew(0deg, -10deg);
+  }
+  to {
+    transform: translateX(-30%) skew(10deg, -5deg);
+  }
+}
+
+.card {
+  margin: auto;
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 360px;
+  height: 600px;
+  box-shadow: 
+    0 3.2px 2.2px rgba(0, 0, 0, 0.02),
+    0 7px 5.4px rgba(0, 0, 0, 0.028),
+    0 12.1px 10.1px rgba(0, 0, 0, 0.035),
+    0 19.8px 18.1px rgba(0, 0, 0, 0.042),
+    0 34.7px 33.8px rgba(0, 0, 0, 0.05),
+    0 81px 81px rgba(0, 0, 0, 0.07);
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 0 28px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.card::before {
+  z-index: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: #f6c90e;
+  top: -20%;
+  left: -50%;
+  z-index: 0;
+}
+.item-image {
+  border-radius: 30px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+@media only screen and (max-width: 320px){
+  .item-image {
+      height: 240px;
+  }
+}
+.item-image img {
+  display: block;
+  width: 100%;
+  filter: drop-shadow(0 30px 20px rgba(0, 0, 0, 0.2));
+  transform: rotate(-24deg);
+  margin-left: -16px;
+}
+.card-body {
+  height: calc(100% - 98px);
+  position: relative;
+  overflow-y: scroll;
+}
+.card-body::-webkit-scrollbar {
+  display: none;
+}
+.shopItemButton {
+  cursor: pointer;
+  background-color: #f6c90e;
+  font-weight: 700;
+  font-size: 14px;
+  box-sizing: border-box;
+  width: auto;
+  height: 46px;
+  min-width: 46px;
+  padding: 16px 20px;
+  border-radius: 100px;
+  transition: all 0.25s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.checkTick{
+  width: 1.25rem; /* Equivalent to 5 in the default font size */
+  flex-shrink: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+}
+.shopItemName{
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.shopItemPrice{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
